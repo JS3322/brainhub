@@ -7,7 +7,7 @@ class MessageAdmin(admin.ModelAdmin):
 
     """ Message Admin Definition conversations/admin list_display = ("__str__", "created") """
 
-    list_display = ("__str__",)
+    list_display = ("__str__", "created")
 
 
 @admin.register(models.Conversation)
