@@ -4,7 +4,7 @@ from . import models
 
 class HomeView(ListView):
 
-    """ HomeView Definition """
+    """ HomeView Definition1 """
 
     model = models.Room
     paginate_by = 10
