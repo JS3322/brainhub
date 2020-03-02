@@ -21,7 +21,7 @@
 			type: 'post',
 			dataType: 'json',
 			url: 'http://www.gritt.co.kr/jsp/examApplyGroup/cartUpdateOk.jsp?iframeYn=Y',
-			data: {'unionCode':'20', 'saveGubun' : 'ins', 'memId_test' : 'test015'},
+			data: {'unionCode':'21', 'saveGubun' : 'ins', 'memId_test' : 'test015'},
 			success:function(){
 					alert("a");
 			}		
@@ -45,9 +45,9 @@
       {% include "partials/nav.html" %}
     </header>
 
-      <!--
+<!--
 	  item 1 : bg-orange-500
-  -->
+-->
 	  <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
 		<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
 		  <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
@@ -72,18 +72,17 @@
 			<input type="submit">로그인</input>
 		   </form> 
 		<form name ="frm" id="frm" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
-			<input type="hidden" name="unionCode" id="unionCode" value="20"/>
+			<input type="hidden" name="unionCode" id="unionCode" value="21"/>
 			<input type="hidden" name="testchk" id="testchk" value="y"/>
 			<input type="submit">결제하기</input>
 			</form>
 			<form name ="frm2" id="frm2" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
-			<input type="hidden" name="unionCode" id="unionCode" value="1"/>
+			<input type="hidden" name="unionCode" id="unionCode" value="21"/>
 			<a href="javascript:selGoods();">장바구니</a>
 			</form>
-
-			
 		</div>
 	  </div>
+
 
 
     {% block content %}{% endblock %}
