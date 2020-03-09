@@ -16,4 +16,5 @@ urlpatterns = [
     ),
     path("update-profile/", views.UpdateProfileView.as_view(), name="update"),
     path("<int:pk>/", views.UserProfileView.as_view(), name="profile"),
+    path("login/grit", views.grit_login, name="grit-login"),
 ]
