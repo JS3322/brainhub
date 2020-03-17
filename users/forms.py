@@ -80,4 +80,3 @@ class SignUpForm(forms.ModelForm):
     password1 = forms.CharField(
         widget=forms.PasswordInput(attrs={"placeholder": "Confirm Password"})
     )
-

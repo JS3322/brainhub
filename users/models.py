@@ -18,30 +18,24 @@ class User(AbstractUser):
     # DB에 들어갈 값
     GENDER_MALE = "male"
     GENDER_FEMALE = "female"
-    GENDER_ORTHER = "other"
+    GENDER_OTHER = "other"
 
     # form에 보여질 값
     GENDER_CHOICES = (
         (GENDER_MALE, "Male"),
         (GENDER_FEMALE, "Female"),
-        (GENDER_ORTHER, "Other"),
+        (GENDER_OTHER, "Other"),
     )
 
     LANGUAGE_ENGLISH = "en"
     LANGUAGE_KOREAN = "kr"
 
-    LANGUAGE_CHOICES = (
-        (LANGUAGE_ENGLISH, "English"),
-        (LANGUAGE_KOREAN, "Korean"),
-    )
+    LANGUAGE_CHOICES = ((LANGUAGE_ENGLISH, "English"), (LANGUAGE_KOREAN, "Korean"))
 
     CURRENCY_USD = "usd"
     CURRENCY_KRW = "krw"
 
-    CURRENCY_CHOICES = (
-        (CURRENCY_USD, "USD"),
-        (CURRENCY_KRW, "KRW"),
-    )
+    CURRENCY_CHOICES = ((CURRENCY_USD, "USD"), (CURRENCY_KRW, "KRW"))
 
     LOGIN_EMAIL = "email"
     LOGIN_GITHUB = "github"
@@ -54,9 +48,7 @@ class User(AbstractUser):
     )
 
     avatar = models.ImageField(upload_to="avatars", blank=True)
-    gender = models.CharField(
-        choices=GENDER_CHOICES, max_length=10, blank=True, default=GENDER_MALE,
-    )
+    gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
     bio = models.TextField(blank=True)
     birthdate = models.DateField(blank=True, null=True)
     language = models.CharField(
@@ -76,6 +68,7 @@ class User(AbstractUser):
         return reverse("users:profile", kwargs={"pk": self.pk})
 
     def verify_email(self):
+        print(self)
         print("connect verify_email")
         if self.email_verified is False:
             secret = uuid.uuid4().hex[:20]
