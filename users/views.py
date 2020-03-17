@@ -18,6 +18,8 @@ class LoginView(FormView):
         email = form.cleaned_data.get("email")
         password = form.cleaned_data.get("password")
         user = authenticate(self.request, username=email, password=password)
+        print(email)
+        print(password)
         if user is not None:
             login(self.request, user)
         return super().form_valid(form)
@@ -38,9 +40,12 @@ class SignUpView(FormView):
         form.save()
         email = form.cleaned_data.get("email")
         password = form.cleaned_data.get("password")
+        print(email)
+        print(password)
         user = authenticate(self.request, username=email, password=password)
         if user is not None:
             login(self.request, user)
+        user.verify_email()
         return super().form_valid(form)
 
 

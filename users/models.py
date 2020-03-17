@@ -4,8 +4,9 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.core.mail import send_mail
 from django.utils.html import strip_tags
-from django.shortcuts import reverse
 from django.template.loader import render_to_string
+
+from django.shortcuts import reverse
 
 # Create your models here.
 
@@ -75,6 +76,7 @@ class User(AbstractUser):
         return reverse("users:profile", kwargs={"pk": self.pk})
 
     def verify_email(self):
+        print("connect verify_email")
         if self.email_verified is False:
             secret = uuid.uuid4().hex[:20]
             self.email_secret = secret
@@ -82,7 +84,7 @@ class User(AbstractUser):
                 "emails/verify_email.html", {"secret": secret}
             )
             send_mail(
-                _("Verify Airbnb Account"),
+                "Verify Airbnb Account",
                 strip_tags(html_message),
                 settings.EMAIL_FROM,
                 [self.email],
