@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\wooks\\.virtualenvs\\brainhub-FWmM8uk1\\Scripts\\python.exe",
+  "python.pythonPath": "/Users/grit/.local/share/virtualenvs/brainhub_django_ver-t6aqIa5o/bin/python",
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
   "python.linting.flake8Args": ["--max-line-length=88"],
