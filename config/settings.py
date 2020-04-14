@@ -94,6 +94,16 @@ DATABASES = {
     }
 }
 
+DATABASES_MARIADB = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get("DB_GRIT_ACCESS_NAME"),
+        'USER': os.environ.get("DB_GRIT_ACCESS_ID"),
+        'PASSWORD': os.environ.get("DB_GRIT_ACCESS_PW"),
+        'HOST': os.environ.get("DB_GRIT_ACCESS_HOST"),
+        'PORT': os.environ.get("DB_GRIT_ACCESS_PORT"),
+    },
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
