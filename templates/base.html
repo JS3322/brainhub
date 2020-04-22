@@ -47,44 +47,43 @@
 
 <!--
 	  item 1 : bg-orange-500
--->
+
 	  <div class="flex-shrink-0 m-6 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
-		<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
-		  <rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
-		  <rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
-		</svg>
-		<div class="relative pt-10 px-10 flex items-center justify-center">
-		  <div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
-		  <img class="relative w-40" src="http://www.griti.co.kr/img/main/main_title.png" alt="">
-		</div>
-		<div class="relative text-white px-6 pb-6 mt-6">
-		  <span class="block opacity-75 -mb-1">판매</span>
-		  <div class="flex justify-between">
-			<span class="block font-semibold text-xl">컨텐츠1</span>
-			<span class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">7000원</span>
-		  </div>
-		  <!-- <button class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full" >확인하기</button> -->
+			<svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
+		  	<rect x="159.52" y="175" width="152" height="152" rx="8" transform="rotate(-45 159.52 175)" fill="white"/>
+		  	<rect y="107.48" width="152" height="152" rx="8" transform="rotate(-45 0 107.48)" fill="white"/>
+			</svg>
+			<div class="relative pt-10 px-10 flex items-center justify-center">
+		  	<div class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3" style="background: radial-gradient(black, transparent 60%); transform: rotate3d(0, 0, 1, 20deg) scale3d(1, 0.6, 1); opacity: 0.2;"></div>
+		  		<img class="relative w-40" src="http://www.griti.co.kr/img/main/main_title.png" alt="">
+				</div>
+			<div class="relative text-white px-6 pb-6 mt-6">
+		  	<span class="block opacity-75 -mb-1">판매</span>
+		  	<div class="flex justify-between">
+					<span class="block font-semibold text-xl">컨텐츠1</span>
+					<span class="block bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">7000원</span>
+		  	</div>
+		  <button class="modal-open bg-transparent border border-gray-500 hover:border-indigo-500 text-gray-500 hover:text-indigo-500 font-bold py-2 px-4 rounded-full" >확인하기</button> 
 		 
 		   <form id="loginFrm" method="post" action="http://www.gritt.co.kr/jsp/etc/loginRe.jsp">
-			<input type="hidden" name="prePage" value="/jsp/examApplyGroup/cart.jsp?menuNo=8&subMenuNo=5&testchk=y"/>
-			<input name="memId" type="hidden" id="memId" value="test015"/>
-			<input name="memPw" type="hidden" id="memPw" value="1234qwer"/>
-			<input type="submit">로그인</input>
+					<input type="hidden" name="prePage" value="/jsp/examApplyGroup/cart.jsp?menuNo=8&subMenuNo=5&testchk=y"/>
+					<input name="memId" type="hidden" id="memId" value="test015"/>
+					<input name="memPw" type="hidden" id="memPw" value="1234qwer"/>
+					<input type="submit">로그인</input>
 		   </form> 
-		<form name ="frm" id="frm" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
-			<input type="hidden" name="unionCode" id="unionCode" value="20"/>
-			<input type="hidden" name="testchk" id="testchk" value="y"/>
-			<input type="submit">결제하기</input>
-			</form>
-			<form name ="frm2" id="frm2" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
-			<input type="hidden" name="unionCode" id="unionCode" value="1"/>
-			<a href="javascript:selGoods();">장바구니</a>
-			</form>
-
-			
+				<form name ="frm" id="frm" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
+					<input type="hidden" name="unionCode" id="unionCode" value="20"/>
+					<input type="hidden" name="testchk" id="testchk" value="y"/>
+					<input type="submit">결제하기</input>
+				</form>
+				<form name ="frm2" id="frm2" method="POST" action="http://www.gritt.co.kr/jsp/payment/orderInfoA.jsp">
+					<input type="hidden" name="unionCode" id="unionCode" value="1"/>
+					<a href="javascript:selGoods();">장바구니</a>
+				</form>
+			</div>
 		</div>
-	  </div>
-
+	</div>
+-->
 
     {% block content %}{% endblock %}
 
